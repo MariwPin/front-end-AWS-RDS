@@ -57,7 +57,7 @@ modalSearchButton.addEventListener('click', () => {
 // Mostrar registros de la tabla country
 countryBtn.addEventListener('click', () => {
     clearRecords();
-    axios.get('../getRecords.php?table=country')
+    axios.get('http://54.167.198.72/php-intro-connection/getRecords.php?table=country')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             populateTable(response.data, ['Code', 'Name', 'Continent', 'Region', 'Population'], 'Países');
@@ -70,7 +70,7 @@ countryBtn.addEventListener('click', () => {
 // Mostrar registros de la tabla city
 cityBtn.addEventListener('click', () => {
     clearRecords();
-    axios.get('../getRecords.php?table=city')
+    axios.get('http://54.167.198.72/php-intro-connection/getRecords.php?table=city')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             populateTable(response.data, ['ID', 'Name', 'CountryCode', 'District', 'Population'], 'Ciudades');
@@ -83,7 +83,7 @@ cityBtn.addEventListener('click', () => {
 // Mostrar registros de la tabla countrylanguage
 countryLanguageBtn.addEventListener('click', () => {
     clearRecords();
-    axios.get('../getRecords.php?table=countrylanguage')
+    axios.get('http://54.167.198.72/php-intro-connection/getRecords.php?table=countrylanguage')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             populateTable(response.data, ['CountryCode', 'Language', 'IsOfficial', 'Percentage'], 'Idiomas');
