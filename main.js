@@ -26,7 +26,7 @@ modalSearchButton.addEventListener('click', () => {
     clearRecords();
 
     // Solicitud GET en axios con el nombre del país
-    axios.get(`../getRecords.php?search=${encodeURIComponent(countryName)}`)
+    axios.get(`http://54.167.198.72/php-intro-connection/getRecords.php?search=${encodeURIComponent(countryName)}`)
         .then(response => {
             const data = response.data;
             console.log('Resultado de búsqueda:', data); // Verifica la respuesta
